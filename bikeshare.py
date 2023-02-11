@@ -171,17 +171,17 @@ def user_stats(df):
         print('-'*40)
         
 def read_data(df):
-        ans = input('would you like to view 5 row of individual trip data? Enter yes or no? \n').lower()
+        answer = input('would you like to view 5 row of individual trip data? Enter yes or no? \n').lower()
         start_loc = 0
         while True:
-            if ans == 'yes':
+            if answer == 'yes':
                 start_loc += 5
                 ls = df.iloc[(start_loc - 5): start_loc]
                 print(ls)
                 print('\n[{} row x {} columns]'.format(ls.shape[0], ls.shape[1]))
                 ans = input("Do you wish to continue?: ").lower()
                 
-            elif ans == 'no':
+            elif answer == 'no':
                 break
             else:
                 print('Type wrong. please try again. \n')
